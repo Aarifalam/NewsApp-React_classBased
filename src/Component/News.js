@@ -57,19 +57,17 @@ class News extends Component {
                 News Component is working
 
                 <div className="row">
-                    <div className="col-4">
-                        <NewsItems title="Farmers" description="In INDIA many farmer are not getting good price for their crops. India Government is working on this since 12 Years still then didn't get solution for this big issue." imageUrl="https:////m.files.bbci.co.uk/modules/bbc-morph-sport-seo-meta/1.22.0/images/bbc-sport-logo.png" newsUrl="todo" />
-                    </div>
-                    <div className="col-4">
-                        <NewsItems title="my Title" description="this is the description" />
-                    </div>
-                    <div className="col-4">
-                        <NewsItems title="my Title" description="this is the description" />
-                    </div>
+
+                    {this.state.article.map((element) => {
+                        // if i will use normal function in map function then it will not work because in this we need to bind the function
+                        console.log(element)
+                        return <div className="col-4" key={element.url}>
+                            <NewsItems title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url} />
+                        </div>
+                    })}
+
+
                 </div>
-                <NewsItems />
-                <NewsItems />
-                <NewsItems />
             </div>
         )
     };

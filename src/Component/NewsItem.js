@@ -11,7 +11,7 @@ class NewsItems extends Component {
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{description}</p>
-                        <a href="/newsdetails" className="btn btn-primary">Go somewhere</a>
+                        <a href={newsUrl} className="btn btn-sm btn-primary">Go somewhere</a>
                         {/* this button has "/" thats why after clicking this is refreshing the web app */}
                     </div>
                 </div>
