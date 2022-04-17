@@ -2,8 +2,19 @@ import React, { Component } from "react";
 
 class NewsItems extends Component {
     render() {
+        let { title, description } = this.props;
         return (
-            <div style={{ border: "2px solid black", margin: "2px" }}>NewsItem is working</div>
+            <div>
+                <div className="card" style={{ width: "18rem" }}>
+                    <img src="https:////m.files.bbci.co.uk/modules/bbc-morph-sport-seo-meta/1.22.0/images/bbc-sport-logo.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                        <p className="card-text">{description}</p>
+                        <a href="/" className="btn btn-primary">Go somewhere</a>
+                        {/* this button has "/" thats why after clicking this is refreshing the web app */}
+                    </div>
+                </div>
+            </div>
         )
     };
 };
